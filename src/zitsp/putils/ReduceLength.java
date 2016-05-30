@@ -11,10 +11,15 @@ public class ReduceLength {
 		return reduceDecimal(val, DEFAULT_DECIMAL_LENGTH);
 	}
 
-	private static String reduceDecimal(Double val, int length) {
-		String str = String.valueOf(val);
+	private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("##########.##########");
+
+	public static String reduceDecimal(Double val, int length) {
+		String str = String.valueOf(DECIMAL_FORMAT.format(val));
 		if (!str.contains(".")) {
-			return str;
+			StringBuffer sb = new StringBuffer();
+			sb.append(str);
+			IntStream.rangeClosed(1, length).forEach(e -> sb.append("0"));
+			return sb.toString();
 		}
 		int index = str.indexOf(".");
 		if (length < str.length() - index) {
@@ -26,8 +31,7 @@ public class ReduceLength {
 		for (int i = diff; i <= length; i++) {
 			sb.append(0);
 		}
-		return sb.toString();
-	}
+		return sb.toSt
 
 	public static void main(String[] args) {
 		System.out.println(ReduceLength.reduceDecimal(0.0));
