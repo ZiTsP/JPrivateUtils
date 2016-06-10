@@ -1,4 +1,4 @@
-package zitsp.putils;
+package zitsp.putils.filemanipulation;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

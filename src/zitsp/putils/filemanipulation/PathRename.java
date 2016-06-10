@@ -1,4 +1,4 @@
-package zitsp.putils;
+package zitsp.putils.filemanipulation;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
