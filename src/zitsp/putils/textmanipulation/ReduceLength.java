@@ -1,4 +1,7 @@
-package zitsp.putils;
+package zitsp.putils.textmanipulation;
+
+import java.text.DecimalFormat;
+import java.util.stream.IntStream;
 
 import java.text.DecimalFormat;
 import java.util.stream.IntStream;

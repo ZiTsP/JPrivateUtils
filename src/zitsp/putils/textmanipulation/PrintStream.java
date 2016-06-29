@@ -1,4 +1,4 @@
-package zitsp.putils;
+package zitsp.putils.textmanipulation;
 
 import java.io.BufferedReader;
 import java.io.IOException;

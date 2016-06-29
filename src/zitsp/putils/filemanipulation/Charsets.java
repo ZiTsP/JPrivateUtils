@@ -1,7 +1,9 @@
-package zitsp.putils;
+package zitsp.putils.filemanipulation;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+
+import zitsp.putils.PlatformInfo;
 
 public class Charsets {
 	
