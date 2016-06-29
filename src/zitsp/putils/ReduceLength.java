@@ -1,5 +1,8 @@
 package zitsp.putils;
 
+import java.text.DecimalFormat;
+import java.util.stream.IntStream;
+
 public class ReduceLength {
 
 	private ReduceLength() {
@@ -18,6 +21,7 @@ public class ReduceLength {
 		if (!str.contains(".")) {
 			StringBuffer sb = new StringBuffer();
 			sb.append(str);
+			sb.append(".");
 			IntStream.rangeClosed(1, length).forEach(e -> sb.append("0"));
 			return sb.toString();
 		}
@@ -31,7 +35,8 @@ public class ReduceLength {
 		for (int i = diff; i <= length; i++) {
 			sb.append(0);
 		}
-		return sb.toSt
+		return sb.toString();
+	}
 
 	public static void main(String[] args) {
 		System.out.println(ReduceLength.reduceDecimal(0.0));
